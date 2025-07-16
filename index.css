@@ -12,26 +12,29 @@ body {
   background-color: #000;
 }
 
-/* ===== Shared Background Container ===== */
-/* ===== Shared Background Container ===== */
+/* Reset and enforce body/html */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100% !important;
+  overflow: auto !important;
+  background-attachment: scroll !important;
+}
+
 .shared-background {
   background-image: url('./Images&Video/bcg.png');
-  background-size: cover; /* Default for desktop */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll !important; /* Force scroll */
+  background-attachment: fixed; /* This creates the fixed/parallax effect */
   width: 100%; /* Full width */
   min-height: 100%; /* Grow with content */
   display: block; /* Block-level behavior */
   position: relative; /* Follow document flow */
   height: auto !important; /* Ensure height adjusts */
   overflow: auto; /* Enable scrolling if needed */
-  z-index: 0; /* Behind content */
-}
-
-.shared-background > * {
-  position: relative; /* Ensure children scroll */
-  z-index: 1; /* Above background */
+  z-index: 0;
 }
 
 /* Mobile adjustments */
@@ -44,10 +47,12 @@ body {
   }
 }
 
-/* Debugging aids - remove after testing */
-.shared-background {
-  outline: 2px solid red !important; /* Visible boundary */
-  background-color: rgba(255, 0, 0, 0.1) !important; /* Light red tint */
+.story, .details, .rsvp {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 80px 40px;
+  color: white;
 }
 
 h1, h2 {
