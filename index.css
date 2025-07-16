@@ -227,12 +227,19 @@ body {
 }
 
 /* For mobile */
-@media (max-width: 768px) {
-  .story,
-  .details,
-  .rsvp {
-    background-position: center top; /* or adjust as needed */
-    background-size: contain; /* or cover, depending on your goal */
-    background-attachment: scroll; /* disables fixed on mobile for better behavior */
+/* Default for desktop */
+.section {
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Mobile fix */
+@media screen and (max-width: 768px) {
+  .section {
+    background-size: contain; /* prevent zoom-in */
+    background-attachment: scroll; /* prevent glitchy scrolling */
   }
 }
