@@ -40,7 +40,20 @@ body, html {
     height: auto !important; /* Override any fixed height */
 }
 
+/* Mobile adjustments */
+@media (max-width: 370px) {
+  .shared-background {
+    background-size: contain; /* Fit image */
+    background-position: top center; /* Align top */
+    min-height: auto !important; /* Natural height */
+    height: auto !important; /* Override any fixed height */
+  }
+}
 
+.shared-background {
+  outline: 2px solid red !important; /* Visible boundary */
+  background-color: rgba(255, 0, 0, 0.1) !important; /* Light red tint */
+}
 
 
 
