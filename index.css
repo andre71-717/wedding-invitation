@@ -36,24 +36,11 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* This creates the fixed/parallax effect */
-  width: 100%; /* Full width */
-  min-height: 100%; /* Grow with content */
-  display: block; /* Block-level behavior */
-  position: relative; /* Follow document flow */
-  height: auto !important; /* Ensure height adjusts */
-  overflow: auto; /* Enable scrolling if needed */
-  z-index: 0;
+      min-height: auto !important; /* Natural height */
+    height: auto !important; /* Override any fixed height */
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .shared-background {
-    background-size: contain; /* Fit image */
-    background-position: top center; /* Align top */
-    min-height: auto !important; /* Natural height */
-    height: auto !important; /* Override any fixed height */
-  }
-}
+
 
 
 
