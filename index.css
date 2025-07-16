@@ -212,8 +212,27 @@ body {
   color: white;
 }
 
-.story img,
-.details img,
-.rsvp img {
-  opacity: 0.8; /* adjust to taste */
+.story,
+.details,
+.rsvp {
+  background-image: url('Us4.jpg'); /* your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.story, .details, .rsvp img{
+  opacity: 0.8;
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+  .story,
+  .details,
+  .rsvp {
+    background-position: center top; /* or adjust as needed */
+    background-size: contain; /* or cover, depending on your goal */
+    background-attachment: scroll; /* disables fixed on mobile for better behavior */
+  }
 }
