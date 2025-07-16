@@ -212,34 +212,31 @@ body {
   color: white;
 }
 
-.background-wrapper {
-  background-image: url('./Images&Video/bcg.png'); /* Your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* fallback for desktop */
-  position: relative;
-  z-index: 0;
+
+
+/* Add slight overlay to images inside */
+.story img,
+.details img,
+.rsvp img {
+  opacity: 0.85;
 }
 
-.story, .details, .rsvp img{
-  opacity: 0.8;
-}
-
-/* Ensure sections inside remain transparent */
-.story, .details, .rsvp {
-  background: transparent;
-  position: relative;
-  z-index: 1;
-  color: white;
-  padding: 80px 40px;
-}
-
-/* Fix for mobile screens */
+/* Responsive fix for mobile */
 @media (max-width: 768px) {
   .story, .details, .rsvp {
-    background-size: contain;
     background-attachment: scroll;
+    background-size: contain;  /* or `cover` if you prefer full width */
     background-position: top center;
   }
+}
+
+/* Shared background styling for story, details, rsvp */
+.story,
+.details,
+.rsvp {
+  background-image: url('./Images&Video/bcg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
