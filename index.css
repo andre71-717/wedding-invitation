@@ -13,20 +13,41 @@ body {
 }
 
 /* ===== Shared Background Container ===== */
+/* ===== Shared Background Container ===== */
 .shared-background {
   background-image: url('./Images&Video/bcg.png');
-  background-size: cover;
+  background-size: cover; /* Default for desktop */
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This creates the fixed/parallax effect */
+  background-attachment: scroll !important; /* Force scroll */
+  width: 100%; /* Full width */
+  min-height: 100%; /* Grow with content */
+  display: block; /* Block-level behavior */
+  position: relative; /* Follow document flow */
+  height: auto !important; /* Ensure height adjusts */
+  overflow: auto; /* Enable scrolling if needed */
+  z-index: 0; /* Behind content */
 }
 
-.story, .details, .rsvp {
-  background: transparent;
-  position: relative;
-  z-index: 1;
-  padding: 80px 40px;
-  color: white;
+.shared-background > * {
+  position: relative; /* Ensure children scroll */
+  z-index: 1; /* Above background */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .shared-background {
+    background-size: contain; /* Fit image */
+    background-position: top center; /* Align top */
+    min-height: auto !important; /* Natural height */
+    height: auto !important; /* Override any fixed height */
+  }
+}
+
+/* Debugging aids - remove after testing */
+.shared-background {
+  outline: 2px solid red !important; /* Visible boundary */
+  background-color: rgba(255, 0, 0, 0.1) !important; /* Light red tint */
 }
 
 h1, h2 {
