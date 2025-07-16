@@ -19,8 +19,8 @@ body {
   
   a {
     text-decoration: none;
-    color: #333;
-    border: 1px solid #333;
+    color: white;
+    border: 1px solid white;
     padding: 5px 12px;
     border-radius: 20px;
     display: inline-block;
@@ -85,6 +85,7 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
   }
+
   
   /* Story Section */
   .story {
@@ -110,7 +111,7 @@ body {
   .story .photo img {
     width: 300px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 3%;
     object-fit: cover;
   }
   
@@ -136,7 +137,7 @@ body {
   .columns .left img {
     width: 300px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 3%;
     object-fit: cover;
   }
   
@@ -166,7 +167,7 @@ body {
   
   .rsvp .photo img {
     width: 300px;
-    border-radius: 50%;
+    border-radius: 3%;
     object-fit: cover;
   }
   
@@ -175,22 +176,38 @@ body {
     text-align: center;
   }
 
-  #musicBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff7e7e;
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  #musicBtn:hover {
-    background-color: #ff5e5e;
-  }
+  #startMusicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+#startMusicBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+ /* Body section */
+  .shared-background {
+  background-image: url('./Images&Video/Us4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.story, .details, .rsvp {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 80px 40px;
+  color: white;
+}

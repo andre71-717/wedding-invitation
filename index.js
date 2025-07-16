@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const music = document.getElementById("bgMusic");
-    const btn = document.getElementById("musicBtn");
-  
-    btn.addEventListener("click", function () {
-      if (music.paused) {
-        music.play();
-        btn.textContent = "⏸️";
-      } else {
-        music.pause();
-        btn.textContent = "▶️";
-      }
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("startMusicBtn");
+
+  btn.addEventListener("click", function () {
+    music.muted = false;
+    music.play().then(() => {
+      btn.style.display = "none"; // Hide the button after success
+    }).catch((err) => {
+      console.warn("Play failed:", err);
     });
   });
+});
 
 
   function updateCountdown() {
