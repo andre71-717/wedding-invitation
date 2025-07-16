@@ -1,8 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,178 +10,174 @@ body {
   line-height: 1.7;
   color: #fff;
   background-color: #000;
+}
+
+/* ===== Shared Background Container ===== */
+.shared-background {
   background-image: url('./Images&Video/bcg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* This creates the fixed/parallax effect */
 }
-  
-  h1, h2 {
-    font-family: Georgia, serif !important;
-    font-weight: 400;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-    border: 1px solid white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
-  /* Hero Section */
 
-  
+.story, .details, .rsvp {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 80px 40px;
+  color: white;
+}
+
+h1, h2 {
+  font-family: Georgia, serif !important;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ===== Hero Section ===== */
 #hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  }
+}
 
-  .hero .overlay {
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    padding: 40px 60px;
-    border-radius: 12px;
-    text-align: center;
-  }
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.hero .overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+}
 
-  .hero {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .hero .overlay {
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-  }
-  
-  .hero p {
-    font-weight: bold;
-    margin-top: 10px;
-  }
+.hero h1 {
+  font-size: 3rem;
+}
 
-  .countdown {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
+.hero p {
+  font-weight: bold;
+  margin-top: 10px;
+}
 
-  
-  /* Story Section */
-  .story {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 40px;
-    gap: 50px;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-  }
-  
-  .story .text {
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .story .text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .story .photo img {
-    width: 300px;
-    height: auto;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
-  /* Details Section */
-  .details {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #e8e6e4;
-  }
-  
-  .details h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-  }
-  
-  .columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-  }
-  
-  .columns .left img {
-    width: 300px;
-    height: auto;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
-  .columns .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .info h3 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-  }
-  
-  /* RSVP Section */
-  .rsvp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 40px;
-    gap: 40px;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-  }
-  
-  .rsvp .photo img {
-    width: 300px;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
-  .rsvp .text {
-    max-width: 400px;
-    text-align: center;
-  }
+.countdown {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-  #startMusicBtn {
+/* ===== Story Section ===== */
+.story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.story .text {
+  max-width: 500px;
+  text-align: center;
+}
+
+.story .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.story .photo img {
+  width: 300px;
+  height: auto;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+/* ===== Details Section ===== */
+.details {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.details h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.columns .left img {
+  width: 300px;
+  height: auto;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+.columns .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.info h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+/* ===== RSVP Section ===== */
+.rsvp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.rsvp .photo img {
+  width: 300px;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+.rsvp .text {
+  max-width: 400px;
+  text-align: center;
+}
+
+/* ===== Music Button ===== */
+#startMusicBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -198,29 +194,4 @@ body {
 
 #startMusicBtn:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Inside sections are transparent */
-.story, .details, .rsvp {
-  background: transparent;
-  color: white;
-  position: relative;
-  z-index: 1;
-  padding: 80px 40px;
-}
-
-/* Image overlay styling */
-.story img,
-.details img,
-.rsvp img {
-  opacity: 0.85;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .shared-background {
-    background-attachment: scroll;
-    background-size: contain;
-    background-position: top center;
-  }
 }
