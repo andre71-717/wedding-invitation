@@ -6,11 +6,16 @@
 }
 
 body {
-    font-family: 'Libre Baskerville', serif;
-    line-height: 1.7;
-    color: #333;
-    background-color: #fdfaf6;
-  }
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.7;
+  color: #fff;
+  background-color: #000;
+  background-image: url('./Images&Video/bcg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
   
   h1, h2 {
     font-family: Georgia, serif !important;
@@ -195,48 +200,27 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
- /* Body section */
-  /* .shared-background {
-  background-image: url('./Images&Video/bcg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
-
+/* Inside sections are transparent */
 .story, .details, .rsvp {
   background: transparent;
+  color: white;
   position: relative;
   z-index: 1;
   padding: 80px 40px;
-  color: white;
 }
 
-
-
-/* Add slight overlay to images inside */
+/* Image overlay styling */
 .story img,
 .details img,
 .rsvp img {
   opacity: 0.85;
 }
 
-/* Responsive fix for mobile */
+/* Mobile fix */
 @media (max-width: 768px) {
-  .story, .details, .rsvp {
+  .shared-background {
     background-attachment: scroll;
-    background-size: contain;  /* or `cover` if you prefer full width */
+    background-size: contain;
     background-position: top center;
   }
-}
-
-/* Shared background styling for story, details, rsvp */
-.story,
-.details,
-.rsvp {
-  background-image: url('./Images&Video/bcg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
 }
