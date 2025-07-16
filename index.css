@@ -197,7 +197,7 @@ body {
 
  /* Body section */
   .shared-background {
-  background-image: url('./Images&Video/Us4.jpg');
+  background-image: url('./Images&Video/bcg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -210,4 +210,10 @@ body {
   z-index: 1;
   padding: 80px 40px;
   color: white;
+}
+
+.story img,
+.details img,
+.rsvp img {
+  opacity: 0.8; /* adjust to taste */
 }
