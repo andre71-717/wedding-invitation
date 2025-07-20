@@ -12,13 +12,28 @@ body {
   background-color: #000;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: auto !important;
-  min-height: 100% !important;
-  overflow: auto !important;
-  background-attachment: scroll !important;
+h1, h2 {
+  font-family: Georgia, serif !important;
+  font-weight: 400;
+}
+
+/* ===== Hero Section ===== */
+#hero-video {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 body::before {
@@ -51,40 +66,6 @@ body::before {
     min-height: auto !important; 
     height: auto !important; 
   }
-}
-
-h1, h2 {
-  font-family: Georgia, serif !important;
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* ===== Hero Section ===== */
-#hero-video {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .hero .overlay {
@@ -179,6 +160,16 @@ a {
   font-family: 'Libre Baskerville', serif;
   font-size: 1.3rem;
   margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 /* ===== RSVP Section ===== */
