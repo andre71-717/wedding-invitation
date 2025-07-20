@@ -22,6 +22,20 @@ body, html {
   background-attachment: scroll !important;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./Images&Video/bcg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.9; /* Optional: adjust for desired image brightness */
+}
+
 .story, .details, .rsvp {
   background: transparent;
   position: relative;
@@ -30,15 +44,15 @@ body, html {
   color: white;
 }
 
-.shared-background {
+/* .shared-background {
   background-image: url('./Images&Video/bcg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This creates the fixed/parallax effect */
-      min-height: auto !important; /* Natural height */
-    height: auto !important; /* Override any fixed height */
-}
+  background-attachment: fixed; /
+    min-height: auto !important; 
+    height: auto !important; 
+} */
 
 /* Mobile adjustments */
 @media (max-width: 370px) {
@@ -51,7 +65,7 @@ body, html {
 }
 
 .shared-background {
-  outline: 2px solid red !important; /* Visible boundary */
+  outline: 2px solid rgb(16, 21, 188) !important; /* Visible boundary */
   background-color: rgba(255, 0, 0, 0.1) !important; /* Light red tint */
 }
 
