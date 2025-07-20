@@ -12,7 +12,6 @@ body {
   background-color: #000;
 }
 
-/* Reset and enforce body/html */
 body, html {
   margin: 0;
   padding: 0;
@@ -33,7 +32,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-  opacity: 0.9; /* Optional: adjust for desired image brightness */
+  opacity: 0.9; 
 }
 
 .story, .details, .rsvp {
@@ -44,23 +43,13 @@ body::before {
   color: white;
 }
 
-/* .shared-background {
-  background-image: url('./Images&Video/bcg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /
-    min-height: auto !important; 
-    height: auto !important; 
-} */
-
 /* Mobile adjustments */
 @media (max-width: 370px) {
   .shared-background {
-    background-size: contain; /* Fit image */
-    background-position: top center; /* Align top */
-    min-height: auto !important; /* Natural height */
-    height: auto !important; /* Override any fixed height */
+    background-size: contain; 
+    background-position: top center; 
+    min-height: auto !important; 
+    height: auto !important; 
   }
 }
 
@@ -150,6 +139,7 @@ a {
   height: auto;
   border-radius: 3%;
   object-fit: cover;
+  opacity: 0.9;
 }
 
 /* ===== Details Section ===== */
@@ -175,6 +165,7 @@ a {
   height: auto;
   border-radius: 3%;
   object-fit: cover;
+  opacity: 0.9;
 }
 
 .columns .right {
@@ -204,6 +195,7 @@ a {
   width: 300px;
   border-radius: 3%;
   object-fit: cover;
+  opacity: 0.9;
 }
 
 .rsvp .text {
