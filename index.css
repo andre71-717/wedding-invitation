@@ -64,13 +64,6 @@ body::before {
   }
 }
 
-.shared-background {
-  outline: 2px solid rgb(16, 21, 188) !important; /* Visible boundary */
-  background-color: rgba(255, 0, 0, 0.1) !important; /* Light red tint */
-}
-
-
-
 h1, h2 {
   font-family: Georgia, serif !important;
   font-weight: 400;
