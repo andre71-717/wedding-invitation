@@ -58,6 +58,31 @@ body::before {
   color: white;
 }
 
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.time-box {
+  text-align: center;
+  color: white;
+}
+
+.time-box span {
+  font-size: 35px;
+  font-weight: bold;
+  display: block;
+}
+
+.time-box small {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
 /* Mobile adjustments */
 @media (max-width: 370px) {
   .shared-background {
@@ -194,22 +219,61 @@ a {
   text-align: center;
 }
 
-/* ===== Music Button ===== */
-#startMusicBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  border-radius: 20px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
-}
+/* @media (max-width: 500px) {
+  .overlay {
+    display: none;
+  }
+  .hero-name-mobile {
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+  }
 
-#startMusicBtn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+  .hero-countdown-mobile {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+
+  .hero-countdown-mobile p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .countdown div {
+    text-align: center;
+  }
+
+  .countdown span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .countdown small {
+    display: block;
+    font-size: 0.8rem;
+  }
+} */
+
+
+  
+
+  

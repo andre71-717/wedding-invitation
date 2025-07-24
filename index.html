@@ -23,9 +23,35 @@
     <div class="overlay">
       <h1>Arman & Varduhi </h1>
       <p>Together forever on October 5, 2025</p>
-      <div id="countdown" class="countdown"></div>
+      <div class="countdown-container" id="countdown">
+  <div class="time-box">
+    <span id="days">0</span>
+    <small>days</small>
+  </div>
+  <div class="time-box">
+    <span id="hours">0</span>
+    <small>hours</small>
+  </div>
+  <div class="time-box">
+    <span id="minutes">0</span>
+    <small>minutes</small>
+  </div>
+  <div class="time-box">
+    <span id="seconds">0</span>
+    <small>seconds</small>
+  </div>
+</div>
     </div>
+     <!-- Mobile version names -->
+  <div class="hero-name-mobile" style="display: none;">Arman & Varduhi</div>
+
+  <!-- Mobile version countdown -->
+  <div class="hero-countdown-mobile" style="display: none;">
+    <p>October 5, 2025</p>
+    <div id="countdown" class="countdown"></div>
+  </div>
   </section>
+
 
   <!-- Body Section-->
   <div class="shared-background">
@@ -79,13 +105,7 @@
   </div>
 
  <!-- Audio & Floating Button -->
-<button id="startMusicBtn">Start Music</button>
-<audio id="bgMusic" loop>
-  <source src="./Music/Lil Wayne feat. Bruno Mars - Mirror (Original Instrumental).mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-
+<audio id="bgMusic" src="./Music/Lil Wayne feat. Bruno Mars - Mirror (Original Instrumental).mp3" muted preload="auto" loop playsinline></audio>
   <!-- JS File -->
   <script src="index.js"></script>
 </body>
