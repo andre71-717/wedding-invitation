@@ -1,22 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const music = document.getElementById("bgMusic");
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bgMusic");
 
-  if (!music) {
-    console.error("Audio element not found!");
+  if (!audio) {
+    console.error("Audio element not found in main.html");
     return;
   }
 
-  // Unmute and play music after load — now allowed because of the prior click
-  music.muted = false;
+  // Function to unmute and play audio
+  const playAudio = () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play().catch((error) => {
+        console.error("Failed to play audio:", error);
+      });
+    }
+  };
 
-  // Try playing immediately
-  music.play().catch((err) => {
-    console.warn("Play failed initially:", err);
-    // fallback — wait for one more click if needed
-    document.addEventListener("click", () => {
-      music.play().catch(console.error);
-    }, { once: true });
-  });
+  // Add listeners for click and scroll (both are user interactions)
+  document.body.addEventListener("click", playAudio, { once: true });
+  document.body.addEventListener("scroll", playAudio, { once: true });
+  document.body.addEventListener("touchstart", playAudio, { once: true });
 });
 
 
