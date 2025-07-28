@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: url('./Images&Video/main2.jpg') no-repeat center center fixed;
+  background: url('./Images&Video/main3.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Georgia', serif;
   display: flex;
@@ -80,3 +80,4 @@ body {
 }
 
 }
+

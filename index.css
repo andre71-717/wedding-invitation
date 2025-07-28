@@ -219,7 +219,7 @@ a {
   text-align: center;
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
   .overlay {
     display: none;
   }
@@ -271,7 +271,8 @@ a {
     display: block;
     font-size: 0.8rem;
   }
-} */
+} 
+
 
 
   
