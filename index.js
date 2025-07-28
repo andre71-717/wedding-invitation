@@ -6,50 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Set loop and mute the music initially
-  music.loop = true;
-  music.muted = true;
+  // Unmute and play music after load — now allowed because of the prior click
+  music.muted = false;
 
-  // Force load the audio to ensure it's ready
-  music.load();
-
-  // Add playsinline for iOS compatibility
-  music.setAttribute("playsinline", "");
-
-  // Try to play the audio when it's ready
-  music.addEventListener("canplaythrough", () => {
-    music.play().catch((err) => {
-      console.error("Initial play failed:", err);
-      // If autoplay is blocked, wait for user interaction
-      document.addEventListener("click", triggerUnmute, { once: true });
-      document.addEventListener("scroll", triggerUnmute, { once: true });
-    });
-  }, { once: true });
-
-  // Function to unmute and play music
-  function triggerUnmute() {
-    music.muted = false;
-    music.play().catch((err) => {
-      console.error("Unmute/play failed:", err);
-    });
-  }
-
-  // Fallback: Add a hidden button to force interaction
-  const fallbackBtn = document.createElement("button");
-  fallbackBtn.style.display = "none";
-  fallbackBtn.textContent = "Play Music";
-  document.body.appendChild(fallbackBtn);
-
-  fallbackBtn.addEventListener("click", () => {
-    music.muted = false;
-    music.play();
+  // Try playing immediately
+  music.play().catch((err) => {
+    console.warn("Play failed initially:", err);
+    // fallback — wait for one more click if needed
+    document.addEventListener("click", () => {
+      music.play().catch(console.error);
+    }, { once: true });
   });
-
-  // Simulate a click on the fallback button after 1 second
-  setTimeout(() => {
-    fallbackBtn.click();
-  }, 1000);
 });
+
 
   function updateCountdown() {
   const weddingDate = new Date("2025-10-05T00:00:00");
