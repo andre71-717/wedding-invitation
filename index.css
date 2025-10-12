@@ -18,12 +18,12 @@ h1, h2 {
 }
 
 /* ===== Hero Section ===== */
-#hero-video {
+#hero-image {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;   /* keeps image nicely cropped */
   z-index: -1;
 }
 
@@ -36,13 +36,51 @@ h1, h2 {
   overflow: hidden;
 }
 
+/* Dress Code Section */
+.dress-code {
+  display: block;                 /* vertical layout */
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.dress-code .text {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.dress-code .palette img {
+  width: 45%;                     /* smaller size for desktop */
+  max-width: 380px;               /* caps width for large screens */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dress-code .palette img {
+    width: 70%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dress-code .palette img {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('./Images&Video/bcg.png');
+  background-image: url('./Images&Video/IMG_4600.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
